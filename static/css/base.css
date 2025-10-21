@@ -1,8 +1,105 @@
-h1 {
-    color: #4ac1f7;
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
 }
 
+/* ---------------- NAVBAR ---------------- */
+header {
+    background-color: #fff;
+    padding: 15px 40px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Logo styling */
 .mylogo {
-    height: 300px;
+    height: 50px;  
     width: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.mylogo:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar links */
+header a {
+    text-decoration: none !important;  /* removes underline */
+    color: #e53935;                    /* red tone */
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #b71c1c;                    /* darker red on hover */
+    text-decoration: none !important;
+}
+
+/* ---------------- BLOG LIST PAGE ---------------- */
+.post-entry {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.post-entry:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Blog titles */
+.post-entry h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Blog title links — remove underline */
+.post-entry a {
+    text-decoration: none !important;  /* removes underline */
+    color: #333;                       /* dark text color */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for blog titles */
+.post-entry a:hover {
+    color: #e53935;                    /* red hover color */
+    text-decoration: none !important;  /* keep underline off */
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .mylogo {
+        height: 40px;
+    }
+
+    header a {
+        font-size: 16px;
+    }
+
+    .post-entry {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .post-entry h2 {
+        font-size: 20px;
+    }
 }
